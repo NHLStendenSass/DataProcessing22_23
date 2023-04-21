@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/freedom.json",
+    "title": "Freedom Data",
+    "type": "object",
+    "description": "Data of freedom from database.",
+    "required": ["Year", "Country"],
+    "properties": {
+        "Year": {
+            "type": "integer",
+            "minimum": 2000,
+            "maximum": 2022
+        },
+        "ISO_Code": {
+            "type": "string"
+        },
+        "Country": {
+            "type": "string"
+        },
+        "PERSONAL_FREEDOM_Score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+        },
+        "ECONOMIC_FREEDOM_Score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+        },
+        "HUMAN_FREEDOM_Score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+        },
+        "HUMAN_FREEDOM_Rank": {
+            "type": "integer"
+        },
+        "HUMAN_FREEDOM_Quartile": {
+            "type": "integer"
+        }
+    }
+}

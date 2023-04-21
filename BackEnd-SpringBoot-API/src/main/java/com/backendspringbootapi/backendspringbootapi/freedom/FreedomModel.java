@@ -1,4 +1,4 @@
-package com.backendspringbootapi.backendspringbootapi.Freedom;
+package com.backendspringbootapi.backendspringbootapi.freedom;
 
 
 import jakarta.persistence.Column;

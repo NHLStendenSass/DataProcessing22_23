@@ -1,13 +1,18 @@
 spring:
+  jmx:
+    enabled: false
   datasource:
     url: jdbc:sqlserver://sasspasshost.database.windows.net:1433;database=dataprocessing;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: nhl_supervisor
     password: RjJKTTRrqiJpKH3
-    jpa:
-      database-platform: org.hibernate.dialect.SQLServerDialect
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      sql:
-        init:
-          mode: always
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  server:
+    port: 8080
+  security:
+    basic:
+      enabled: false
+  flyway:
+    url: jdbc:sqlserver://sasspasshost.database.windows.net:1433;database=dataprocessing;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    user: nhl_supervisor
+    password: RjJKTTRrqiJpKH3
+    baseline-on-migrate: true
