@@ -17,4 +17,8 @@ public class FreedomService
     {
         return freedomRepository.findAll();
     }
+    public FreedomModel saveFreedomData(FreedomModel freedomModel)
+    {
+        return freedomRepository.save(freedomModel);
+    }
 }

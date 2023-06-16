@@ -5,27 +5,37 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
 @Entity
-@Table(schema = "dbo",name = "freedom")
+@Table(schema = "nhlstenden",name = "freedom")
 @NoArgsConstructor
+@XmlRootElement
 public class FreedomModel {
     @Id
+    @XmlElement(name = "Year")
     @Column(name = "Year")// check IT LATER
     private String year;
+    @XmlElement(name = "ISO_Code")
     @Column(name = "ISO_Code")
     private String isoCode;
+    @XmlElement(name = "Country")
     @Column(name = "Country")
     private String country;
+    @XmlElement(name = "PERSONAL_FREEDOM_Score")
     @Column(name = "PERSONAL_FREEDOM_Score")
     private String personalFreedomScore;
+    @XmlElement(name = "ECONOMIC_FREEDOM_Score")
     @Column(name = "ECONOMIC_FREEDOM_Score")
     private String economicFreedomScore;
+    @XmlElement(name = "HUMAN_FREEDOM_Score")
     @Column(name = "HUMAN_FREEDOM_Score")
     private String humanFreedomScore;
+    @XmlElement(name = "HUMAN_FREEDOM_Rank")
     @Column(name = "HUMAN_FREEDOM_Rank")
     private String humanFreedomRank;
 

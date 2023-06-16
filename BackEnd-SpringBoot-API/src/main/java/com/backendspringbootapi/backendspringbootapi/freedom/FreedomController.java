@@ -25,4 +25,8 @@ public class FreedomController
     {
         return freedomService.getAllFreedom();
     }
+
+    @RequestMapping("/store")
+    @ResponseStatus(HttpStatus.OK)
+    public FreedomModel save(FreedomModel freedomModel) {return freedomService.saveFreedomData(freedomModel);}
 }
